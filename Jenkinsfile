@@ -49,7 +49,7 @@ pipeline {
 
         stage('Deploy to Kubernetes') {
             steps {
-                sh 'kubectl apply -f deploymentservice.yaml'
+                sh 'kubectl apply -f deploymentservice.yaml --validate=false'
             }
         }
     }
