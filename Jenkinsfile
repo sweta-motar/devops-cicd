@@ -6,7 +6,7 @@ pipeline {
     }
 
     environment {
-        IMAGE_NAME = "sweta-motar/devops-integration"
+        IMAGE_NAME = "swetabgm/devops-integration"
     }
 
     stages {
@@ -36,7 +36,7 @@ pipeline {
                     credentialsId: 'dockerhub-cred',
                     usernameVariable: 'DOCKER_USER',
                     passwordVariable: 'DOCKER_PASS')]) {
-                    sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+                    sh 'echo $DOCKER_PASS | docker login -u swetabgm --password-stdin'
                 }
             }
         }
